@@ -12,7 +12,7 @@ public class Problem037 {
 	static ArrayList<Integer> truncatables = new ArrayList<Integer>(numberOfTruncatables);
 	static int limit = 10000000;
 	static int sum;
-	static ArrayList<Integer> primes = Primes.getPrimes(limit);
+	static ArrayList<Integer> primes = Primes.getAllPrimes(limit);
 
 	public static void main(String[] args) {
 		for(int prime : primes) {

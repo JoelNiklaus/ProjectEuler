@@ -10,7 +10,7 @@ public class Problem046 {
 
 	static int limit = 100000;
 	static ArrayList<Integer> oddComposites = new ArrayList<Integer>();
-	static ArrayList<Integer> primes = Primes.getPrimes(limit);
+	static ArrayList<Integer> primes = Primes.getAllPrimes(limit);
 	
 	public static void main(String[] args) {
 		fillOddComposites();

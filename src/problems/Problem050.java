@@ -11,7 +11,7 @@ public class Problem050 {
 	static int limit = 1000000;
 	static int currentBestNumber = 0;
 	static int currentBestCount = 0;
-	static ArrayList<Integer> primes = Primes.getPrimes(limit);
+	static ArrayList<Integer> primes = Primes.getAllPrimes(limit);
 	
 	public static void main(String[] args) {
 		for(int prime : primes) {
@@ -34,8 +34,7 @@ public class Problem050 {
 			if(sum == prime && count > currentBestCount) {
 				currentBestCount = count;
 				currentBestNumber = sum;
-			}
-				
+			}		
 		}
 	}
 	
