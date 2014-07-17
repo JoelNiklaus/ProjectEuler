@@ -2,6 +2,8 @@ package problems;
 
 import java.util.ArrayList;
 
+import problems.Utilities.Timer;
+
 public class Problem007 {
 
 	static int limit = 10001;

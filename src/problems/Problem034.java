@@ -1,5 +1,7 @@
 package problems;
 
+import problems.Utilities.Timer;
+
 // solved
 
 public class Problem034 {

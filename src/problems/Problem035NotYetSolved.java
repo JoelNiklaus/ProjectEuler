@@ -1,5 +1,7 @@
 package problems;
 
+import problems.Utilities.Timer;
+
 // not yet solved
 
 public class Problem035NotYetSolved {
