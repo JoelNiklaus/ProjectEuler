@@ -22,13 +22,24 @@ public class Primes {
 		return !numbers[number];
 	}
 
-	private static ArrayList<Integer> getPrimes(int start, int limit) {
-		numbers = calculatePrimes(limit);
+	private static ArrayList<Integer> getPrimes(int start, int end) {
+		numbers = calculatePrimes(end);
 		ArrayList<Integer> primes = new ArrayList<Integer>();
-		for (int i = start; i < limit; i++)
+		for (int i = start; i < end; i++)
 			if (isPrime(i))
 				primes.add(i);
 		return primes;
+	}
+
+	/**
+	 * Returns all Primes smaller than the limit.
+	 */
+	public static int[] getAllPrimesArray(int limit) {
+		ArrayList<Integer> primes = getAllPrimes(limit);
+		int[] primesArray = new int[primes.size()];
+		for (int i = 0; i < primes.size(); i++)
+			primesArray[i] = primes.get(i);
+		return primesArray;
 	}
 
 	/**
@@ -43,6 +54,13 @@ public class Primes {
 	 */
 	public static ArrayList<Integer> getOddPrimes(int limit) {
 		return getPrimes(3, limit);
+	}
+
+	/**
+	 * Returns all Primes between start and end.
+	 */
+	public static ArrayList<Integer> getPrimesInRange(int start, int end) {
+		return getPrimes(start, end);
 	}
 	
 	/**

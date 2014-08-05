@@ -1,7 +1,7 @@
 package problems;
 
 
-public class Problem039NotYetSolved {
+public class Problem039NotYetSolvedPythagoreanTriples {
 
 	static int limit = 1000;
 	static int currentBest = 0;
