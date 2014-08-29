@@ -5,18 +5,18 @@ import java.util.ArrayList;
 import problems.Utilities.Primes;
 
 public class Problem041NotYetSolved {
-
+	
 	static int start = 123456789, end = 987654321;
 	static ArrayList<Integer> primes = Primes.getPrimesInRange(start, end);
 	static int sum;
-	
+
 	public static void main(String[] args) {
 		for (int prime : primes)
-			// if (isPandigital(prime))
-			System.out.println(prime);
-		
+			if (isPandigital(prime))
+				System.out.println(prime);
+
 	}
-	
+
 	private static boolean isPandigital(int number) {
 		String numberString = "" + number;
 		if (numberString.contains("0"))
