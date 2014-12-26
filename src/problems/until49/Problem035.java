@@ -5,28 +5,31 @@ import java.util.ArrayList;
 import problems.Utilities.Primes;
 import problems.Utilities.Timer;
 
-// not yet solved
+// solved
 
-public class Problem035NotYetSolved {
-
+public class Problem035 {
+	
 	static int limit = 1000000;
 	static long sum = 0;
-	static ArrayList<Integer> primes = new ArrayList<Integer>();
-	
+	static ArrayList<Integer> primes = Primes.getAllPrimes(limit);
+
 	public static void main(String[] args) {
 		Timer timer = new Timer();
-		primes = Primes.getAllPrimes(limit);
 		for (int p : primes)
-			if (isCircularPrime(p))
-				sum++;
+			if (!("" + p).contains("0"))
+				if (isCircularPrime(p)) {
+					sum++;
+					System.out.println(p);
+				}
+		
 		System.out.println(timer.timeElapsed() + "ms");
 		System.out.println(sum);
 	}
-	
+
 	private static boolean isPrime(int number) {
 		return primes.contains(number);
 	}
-	
+
 	private static boolean isCircularPrime(int number) {
 		for (int i = 0; i < ("" + number).length() - 1; i++) {
 			number = rotate(number);
@@ -35,7 +38,7 @@ public class Problem035NotYetSolved {
 		}
 		return true;
 	}
-	
+
 	private static int rotate(int number) {
 		String string = "" + number;
 		string += string.charAt(0);
