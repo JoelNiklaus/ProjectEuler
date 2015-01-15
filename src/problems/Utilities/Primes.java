@@ -3,9 +3,9 @@ package problems.Utilities;
 import java.util.ArrayList;
 
 public class Primes {
-	
-	private static boolean[] numbers;
 
+	private static boolean[] numbers;
+	
 	private static boolean[] calculatePrimes(int limit) {
 		boolean[] numbers = new boolean[limit + 1];
 		numbers[0] = true;
@@ -16,12 +16,12 @@ public class Primes {
 					numbers[multiple] = true;
 		return numbers;
 	}
-
+	
 	// true means not prime. false means prime.
 	private static boolean isPrime(int number) {
 		return !numbers[number];
 	}
-
+	
 	private static ArrayList<Integer> getPrimes(int start, int end) {
 		numbers = calculatePrimes(end);
 		ArrayList<Integer> primes = new ArrayList<Integer>();
@@ -31,6 +31,18 @@ public class Primes {
 		return primes;
 	}
 
+	public static int[] getPrimesArray(int start, int end) {
+		numbers = calculatePrimes(end);
+		int[] primes = new int[numbers.length];
+		int i = 0;
+		for (int prime = start; prime < end; prime++) {
+			if (isPrime(prime))
+				primes[i] = prime;
+			i++;
+		}
+		return primes;
+	}
+	
 	/**
 	 * Returns all Primes smaller than the limit.
 	 */
@@ -41,28 +53,28 @@ public class Primes {
 			primesArray[i] = primes.get(i);
 		return primesArray;
 	}
-
+	
 	/**
 	 * Returns all Primes smaller than the limit.
 	 */
 	public static ArrayList<Integer> getAllPrimes(int limit) {
 		return getPrimes(2, limit);
 	}
-	
+
 	/**
 	 * Returns all Primes smaller than the limit except 2.
 	 */
 	public static ArrayList<Integer> getOddPrimes(int limit) {
 		return getPrimes(3, limit);
 	}
-
+	
 	/**
 	 * Returns all Primes between start and end.
 	 */
 	public static ArrayList<Integer> getPrimesInRange(int start, int end) {
 		return getPrimes(start, end);
 	}
-	
+
 	/**
 	 * Generates a list with all the prime factors of the number.
 	 *
@@ -81,7 +93,7 @@ public class Primes {
 		}
 		return primeFactors;
 	}
-
+	
 	private static int divide(int number, ArrayList<Integer> primeFactors, int prime) {
 		if (number % prime == 0) {
 			number /= prime;
@@ -91,5 +103,5 @@ public class Primes {
 		}
 		return number;
 	}
-
+	
 }
