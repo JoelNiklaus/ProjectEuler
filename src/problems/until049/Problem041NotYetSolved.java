@@ -40,9 +40,9 @@ public class Problem041NotYetSolved {
 			number = number / 10;
 		}
 		// check if there are all nine digits used
-		// for (int i = 0; i < digits.length; i++)
-		// if (digits[i] == false)
-		// return false;
+		for (int i = 0; i < digits.length; i++)
+			if (digits[i] == false)
+				return false;
 		return true;
 	}
 }
