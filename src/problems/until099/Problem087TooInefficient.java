@@ -27,10 +27,11 @@ public class Problem087TooInefficient {
 			for (int y = 0; y < length; y++)
 				for (int z = 0; z < length; z++)
 					if ((int) (Math.pow(primes.get(x), 2) + Math.pow(primes.get(y), 3) + Math.pow(
-							primes.get(z), 4)) == number)
-						// System.out.println(number + " = " + primes.get(x) + "^2 + " +
-						// primes.get(y) + "^3 + " + primes.get(z) + "^4");
+							primes.get(z), 4)) == number) {
+						System.out.println(number + " = " + primes.get(x) + "^2 + " + primes.get(y)
+								+ "^3 + " + primes.get(z) + "^4");
 						return true;
+					}
 		
 		return false;
 	}

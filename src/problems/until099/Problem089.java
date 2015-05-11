@@ -47,7 +47,5 @@ public class Problem089 {
 						sum += 2;
 			} else
 				counter = 0;
-		
 	}
-
 }

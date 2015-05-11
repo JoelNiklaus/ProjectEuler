@@ -1,10 +1,16 @@
 package problems.Utilities;
 
+import java.math.BigInteger;
 import java.util.ArrayList;
 
 public class Primes {
 
 	private static boolean[] numbers;
+	
+	public static boolean isPrime(int number) {
+		int certainty = 10;
+		return new BigInteger("" + number).isProbablePrime(certainty);
+	}
 	
 	private static boolean[] calculatePrimes(int limit) {
 		boolean[] numbers = new boolean[limit + 1];
@@ -18,7 +24,7 @@ public class Primes {
 	}
 	
 	// true means not prime. false means prime.
-	private static boolean isPrime(int number) {
+	private static boolean isPrimeSlow(int number) {
 		return !numbers[number];
 	}
 	
@@ -26,7 +32,7 @@ public class Primes {
 		numbers = calculatePrimes(end);
 		ArrayList<Integer> primes = new ArrayList<Integer>();
 		for (int i = start; i < end; i++)
-			if (isPrime(i))
+			if (isPrimeSlow(i))
 				primes.add(i);
 		return primes;
 	}
@@ -36,7 +42,7 @@ public class Primes {
 		int[] primes = new int[numbers.length];
 		int i = 0;
 		for (int prime = start; prime < end; prime++) {
-			if (isPrime(prime))
+			if (isPrimeSlow(prime))
 				primes[i] = prime;
 			i++;
 		}
