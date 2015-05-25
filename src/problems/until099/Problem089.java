@@ -2,7 +2,7 @@ package problems.until099;
 
 import java.io.IOException;
 
-import problems.Utilities.Utility;
+import problems.Utilities.EulerUtility;
 
 //solved
 
@@ -12,7 +12,7 @@ public class Problem089 {
 	private static int sum;
 
 	public static void main(String[] args) throws IOException {
-		String roman = Utility.readFile(filePath);
+		String roman = EulerUtility.readFile(filePath);
 		
 		// Solution 1: Regex
 		String pattern = "DCCCC|LXXXX|VIIII|CCCC|XXXX|IIII";

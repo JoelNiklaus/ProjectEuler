@@ -3,7 +3,7 @@ package problems.until099;
 import java.io.IOException;
 import java.util.ArrayList;
 
-import problems.Utilities.Utility;
+import problems.Utilities.EulerUtility;
 
 //solved
 
@@ -12,7 +12,7 @@ public class Problem079 {
 	private static String filePath = "/Users/joelniklaus/Google Drive/Privat/Informatik/Java/ProjectEuler/src/problems/Files/p079_keylog.txt";
 	
 	public static void main(String[] args) throws IOException {
-		String keylog = Utility.readFile(filePath);
+		String keylog = EulerUtility.readFile(filePath);
 		String[] keys = keylog.split(System.lineSeparator());
 		ArrayList<Integer> nums = new ArrayList<Integer>();
 		int[] ratings = new int[10];

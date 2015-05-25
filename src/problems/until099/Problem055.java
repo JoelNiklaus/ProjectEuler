@@ -2,7 +2,7 @@ package problems.until099;
 
 import java.math.BigInteger;
 
-import problems.Utilities.Utility;
+import problems.Utilities.EulerUtility;
 
 // solved
 
@@ -20,8 +20,8 @@ public class Problem055 {
 	
 	private static boolean isLychrel(BigInteger number) {
 		for (int i = 1; i < 50; i++) {
-			number = number.add(new BigInteger(Utility.reverse(number.toString())));
-			if (Utility.isPalindrome(number + ""))
+			number = number.add(new BigInteger(EulerUtility.reverse(number.toString())));
+			if (EulerUtility.isPalindrome(number + ""))
 				return false;
 		}
 		return true;

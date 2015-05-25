@@ -3,7 +3,7 @@ package problems.until099;
 import java.io.IOException;
 import java.util.ArrayList;
 
-import problems.Utilities.Utility;
+import problems.Utilities.EulerUtility;
 
 // solved
 
@@ -13,7 +13,7 @@ public class Problem067 {
 	private static ArrayList<ArrayList<Integer>> triangle = new ArrayList<ArrayList<Integer>>();
 
 	public static void main(String[] args) throws IOException {
-		String triangleString = Utility.readFile(filePath);
+		String triangleString = EulerUtility.readFile(filePath);
 		
 		buildTriangle(triangleString);
 		int nodeValue, leftParentValue, rightParentValue;

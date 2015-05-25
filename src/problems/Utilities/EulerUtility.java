@@ -6,7 +6,7 @@ import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.util.Stack;
 
-public final class Utility {
+public final class EulerUtility {
 	public static boolean isPandigital(long number) {
 		String numberString = "" + number;
 		if (numberString.length() > 9)

@@ -1,6 +1,6 @@
 package problems.until149;
 
-import static problems.Utilities.Utility.isPandigital;
+import static problems.Utilities.EulerUtility.isPandigital;
 
 import java.math.BigInteger;
 

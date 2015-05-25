@@ -1,7 +1,7 @@
 package problems.until149;
 
-import static problems.Utilities.Utility.firstDigit;
-import static problems.Utilities.Utility.lastDigit;
+import static problems.Utilities.EulerUtility.firstDigit;
+import static problems.Utilities.EulerUtility.lastDigit;
 
 import java.util.LinkedList;
 
