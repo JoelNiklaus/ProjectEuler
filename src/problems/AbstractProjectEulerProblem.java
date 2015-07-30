@@ -1,11 +1,11 @@
 package problems;
 
-import problems.Utilities.Timer;
+import problems.Utilities.EulerTimer;
 
 public abstract class AbstractProjectEulerProblem {
 
 	public static void main(String[] args) {
-		Timer timer = new Timer();
+		EulerTimer timer = new EulerTimer();
 
 		execute();
 

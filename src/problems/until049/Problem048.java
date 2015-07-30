@@ -2,7 +2,7 @@ package problems.until049;
 
 import java.math.BigInteger;
 
-import problems.Utilities.Timer;
+import problems.Utilities.EulerTimer;
 
 // solved
 
@@ -12,7 +12,7 @@ public class Problem048 {
 	static BigInteger sum = BigInteger.ZERO;
 
 	public static void main(String[] args) {
-		Timer timer = new Timer();
+		EulerTimer timer = new EulerTimer();
 		for (int i = 1; i <= limit; i++)
 			sum = sum.add(new BigInteger(i + "").pow(i));
 		System.out.println(sum);

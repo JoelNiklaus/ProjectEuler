@@ -2,7 +2,7 @@ package problems.until099;
 
 import java.util.ArrayList;
 
-import problems.Utilities.Timer;
+import problems.Utilities.EulerTimer;
 
 // solved
 
@@ -13,7 +13,7 @@ public class Problem074 {
 	static int sumOfChains = 0;
 
 	public static void main(String[] args) {
-		Timer timer = new Timer();
+		EulerTimer timer = new EulerTimer();
 		ArrayList<Integer> visited = new ArrayList<Integer>();
 		int newNumber;
 		for (int i = 10; i < limit; i++) {

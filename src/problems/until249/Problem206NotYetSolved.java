@@ -2,19 +2,19 @@ package problems.until249;
 
 import java.math.BigInteger;
 
-import problems.Utilities.Timer;
+import problems.Utilities.EulerTimer;
 
 public class Problem206NotYetSolved {
-	
+
 	static BigInteger start = new BigInteger("1020304050607080900");
-
+	
 	public static void main(String[] args) {
-		Timer timer = new Timer();
+		EulerTimer timer = new EulerTimer();
 		BigInteger sqrtCeil = sqrtCeil(start);
-
+		
 		System.out.println(sqrtCeil.pow(2));
 		System.out.println(sqrtCeil.add(BigInteger.ONE).pow(2).subtract(sqrtCeil.pow(2)));
-
+		
 		String regex = "1\\d2\\d3\\d4\\d5\\d6\\d7\\d8[048]900";
 		for (int i = 0; true; i++) {
 			BigInteger square = sqrtCeil.add(new BigInteger(i + "")).pow(2);
@@ -23,10 +23,10 @@ public class Problem206NotYetSolved {
 				break;
 			}
 		}
-		
+
 		System.out.println(timer.timeElapsed());
 	}
-	
+
 	public static BigInteger sqrtFloor(BigInteger x) throws IllegalArgumentException {
 		if (x.compareTo(BigInteger.ZERO) < 0)
 			throw new IllegalArgumentException("Negative argument.");
@@ -41,7 +41,7 @@ public class Problem206NotYetSolved {
 			;
 		return y;
 	}
-
+	
 	public static BigInteger sqrtCeil(BigInteger x) throws IllegalArgumentException {
 		if (x.compareTo(BigInteger.ZERO) < 0)
 			throw new IllegalArgumentException("Negative argument.");

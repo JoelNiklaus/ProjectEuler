@@ -3,7 +3,7 @@ package problems.until099;
 import java.util.ArrayList;
 
 import problems.Utilities.Primes;
-import problems.Utilities.Timer;
+import problems.Utilities.EulerTimer;
 
 // solved
 
@@ -17,7 +17,7 @@ public class Problem069 {
 	
 	public static void main(String[] args) {
 		System.out.println(Math.log10(limit));
-		Timer timer = new Timer();
+		EulerTimer timer = new EulerTimer();
 		for (int number = 2; number < limit; number++)
 			checkRelativelyPrimes(number);
 		System.out.println(currentBestNumber + ", " + currentBest + ": " + timer.timeElapsed()

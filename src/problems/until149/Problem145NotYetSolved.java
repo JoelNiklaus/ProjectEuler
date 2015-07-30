@@ -5,7 +5,7 @@ import static problems.Utilities.EulerUtility.lastDigit;
 
 import java.util.LinkedList;
 
-import problems.Utilities.Timer;
+import problems.Utilities.EulerTimer;
 
 public class Problem145NotYetSolved {
 	
@@ -15,7 +15,7 @@ public class Problem145NotYetSolved {
 	
 	public static void main(String[] args) {
 		System.out.println(getReversible(409));
-		Timer timer = new Timer();
+		EulerTimer timer = new EulerTimer();
 		for (long i = 1; i < limit; i++)
 			if (evenFrontAndUnevenRearOrReversed(i))
 				if (i % 10 != 0 && !alreadyFound.contains(i)) {

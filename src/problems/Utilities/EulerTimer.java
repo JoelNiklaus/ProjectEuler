@@ -2,7 +2,7 @@ package problems.Utilities;
 
 import java.util.Date;
 
-public class Timer {
+public class EulerTimer {
 	long _startTime;
 	
 	/**
@@ -10,7 +10,7 @@ public class Timer {
 	 * you want to time something, or you can reset()
 	 * an existing instance.
 	 */
-	public Timer() { this.reset(); }
+	public EulerTimer() { this.reset(); }
 	
 	public void reset() {
 		_startTime = this.timeNow();

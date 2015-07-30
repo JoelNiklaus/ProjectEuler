@@ -1,6 +1,6 @@
 package problems.until099;
 
-import problems.Utilities.Timer;
+import problems.Utilities.EulerTimer;
 
 public class Problem094NotYetSolved {
 
@@ -10,7 +10,7 @@ public class Problem094NotYetSolved {
 	public static void main(String[] args) {
 		System.out.println(isAlmostEquilateral(5, 6));
 
-		Timer timer = new Timer();
+		EulerTimer timer = new EulerTimer();
 		for (long a = 2; 3 * a < limit + 1; a++) {
 			if (isAlmostEquilateral(a, a + 1))
 				sum += 3 * a + 1;

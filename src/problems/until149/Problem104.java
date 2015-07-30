@@ -4,14 +4,14 @@ import static problems.Utilities.EulerUtility.isPandigital;
 
 import java.math.BigInteger;
 
-import problems.Utilities.Timer;
+import problems.Utilities.EulerTimer;
 
 // solved
 
 public class Problem104 {
 
 	public static void main(String[] args) {
-		Timer timer = new Timer();
+		EulerTimer timer = new EulerTimer();
 		BigInteger last = BigInteger.ONE;
 		BigInteger forelast = BigInteger.ONE;
 		BigInteger current = null;

@@ -3,7 +3,7 @@ package problems.until099;
 import java.util.ArrayList;
 
 import problems.Utilities.Primes;
-import problems.Utilities.Timer;
+import problems.Utilities.EulerTimer;
 
 public class Problem087TooInefficient {
 
@@ -13,7 +13,7 @@ public class Problem087TooInefficient {
 	static int[] primesArray = Primes.getAllPrimesArray(100);
 	
 	public static void main(String[] args) {
-		Timer timer = new Timer();
+		EulerTimer timer = new EulerTimer();
 		for (int i = 1; i < limit; i++)
 			if (isPrimePowerTriple(i))
 				sum++;

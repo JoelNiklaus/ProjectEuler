@@ -1,12 +1,14 @@
 package problems.Utilities;
 
 import java.io.IOException;
+import java.math.BigInteger;
 import java.nio.charset.Charset;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.util.Stack;
 
 public final class EulerUtility {
+	
 	public static boolean isPandigital(long number) {
 		String numberString = "" + number;
 		if (numberString.length() > 9)
@@ -37,6 +39,20 @@ public final class EulerUtility {
 		while (number > 9)
 			number /= 10;
 		return number;
+	}
+
+	public static long factorial(long number) {
+		if (number == 0)
+			return 1;
+		else
+			return factorial(number - 1) * number;
+	}
+
+	public static BigInteger factorial(BigInteger number) {
+		if (number.equals(BigInteger.ZERO))
+			return BigInteger.ONE;
+		else
+			return factorial(number.subtract(BigInteger.ONE)).multiply(number);
 	}
 
 	public static boolean isPalindrome(String number) {

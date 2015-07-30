@@ -2,7 +2,7 @@ package problems.until049;
 
 import java.util.ArrayList;
 
-import problems.Utilities.Timer;
+import problems.Utilities.EulerTimer;
 
 public class Problem007 {
 
@@ -10,7 +10,7 @@ public class Problem007 {
 	static ArrayList<Integer> primes = new ArrayList<Integer>();
 	
 	public static void main(String[] args) {
-		Timer timer = new Timer();
+		EulerTimer timer = new EulerTimer();
 		calculatePrimes();
 		System.out.println(timer.timeElapsed() + "ms");
 		System.out.println(primes.get(limit - 1));

@@ -2,14 +2,14 @@ package problems.until099;
 
 import java.math.BigInteger;
 
-import problems.Utilities.Timer;
+import problems.Utilities.EulerTimer;
 
 // solved
 
 public class Problem097 {
 
 	public static void main(String[] args) {
-		Timer timer = new Timer();
+		EulerTimer timer = new EulerTimer();
 		BigInteger bigPrime = new BigInteger("2");
 		int exponent = 7830457;
 		int factor = 28433;

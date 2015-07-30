@@ -3,7 +3,7 @@ package problems.until049;
 import java.util.ArrayList;
 
 import problems.Utilities.Primes;
-import problems.Utilities.Timer;
+import problems.Utilities.EulerTimer;
 
 // solved
 
@@ -14,7 +14,7 @@ public class Problem035 {
 	static ArrayList<Integer> primes = Primes.getAllPrimes(limit);
 
 	public static void main(String[] args) {
-		Timer timer = new Timer();
+		EulerTimer timer = new EulerTimer();
 		for (int p : primes)
 			if (!("" + p).contains("0"))
 				if (isCircularPrime(p)) {

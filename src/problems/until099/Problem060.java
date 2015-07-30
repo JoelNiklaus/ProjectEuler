@@ -4,7 +4,7 @@ import java.math.BigInteger;
 import java.util.ArrayList;
 
 import problems.Utilities.Primes;
-import problems.Utilities.Timer;
+import problems.Utilities.EulerTimer;
 
 // solved
 
@@ -16,7 +16,7 @@ public class Problem060 {
 	static int currentBest = Integer.MAX_VALUE;
 
 	public static void main(String[] args) {
-		Timer timer = new Timer();
+		EulerTimer timer = new EulerTimer();
 		testPrimes();
 		System.out.println(currentBest);
 		System.out.println(timer.timeElapsed() + " ms");

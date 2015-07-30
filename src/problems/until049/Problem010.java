@@ -1,6 +1,6 @@
 package problems.until049;
 
-import problems.Utilities.Timer;
+import problems.Utilities.EulerTimer;
 
 // solved
 
@@ -11,7 +11,7 @@ public class Problem010 {
 	static boolean[] numbers = new boolean[limit + 1];
 	
 	public static void main(String[] args) {
-		Timer timer = new Timer();
+		EulerTimer timer = new EulerTimer();
 		
 		calculatePrimes();
 

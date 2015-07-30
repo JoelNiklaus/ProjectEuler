@@ -1,6 +1,6 @@
 package problems.until099;
 
-import problems.Utilities.Timer;
+import problems.Utilities.EulerTimer;
 
 // solved
 
@@ -11,7 +11,7 @@ public class Problem092 {
 	static int sumOfChains = 0;
 	
 	public static void main(String[] args) {
-		Timer timer = new Timer();
+		EulerTimer timer = new EulerTimer();
 		int newNumber;
 		for (int i = 1; i < limit; i++) {
 			newNumber = i;

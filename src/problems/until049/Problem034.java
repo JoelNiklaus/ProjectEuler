@@ -1,6 +1,6 @@
 package problems.until049;
 
-import problems.Utilities.Timer;
+import problems.Utilities.EulerTimer;
 
 // solved
 
@@ -10,7 +10,7 @@ public class Problem034 {
 	static int limit = 10000000;
 	
 	public static void main(String[] args) {
-		Timer timer = new Timer();
+		EulerTimer timer = new EulerTimer();
 		
 		long sum = 0;
 		for(int i = 10; i < limit; i++)
