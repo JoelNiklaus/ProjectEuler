@@ -5,11 +5,11 @@ import java.math.BigInteger;
 import problems.Utilities.EulerTimer;
 
 public class Problem243NotYetSolved {
-	
+
 	static double finalLimit = 15499.0 / 94744;
 	static double limit = 4.0 / 10;
-	static int splitter = (int) Math.pow(2, 3);
-	
+	static int splitter = (int) Math.pow(2, 7);
+
 	public static void main(String[] args) {
 		EulerTimer timer = new EulerTimer();
 		System.out.println(finalLimit);
@@ -30,8 +30,9 @@ public class Problem243NotYetSolved {
 		// 6528 -> 0.3137735559981615
 		// 7680 -> 0.26670139341060034
 		// 38798760 -> 0.17102402682518789
+		// 3103900800 -> 0.17102402247231097
 	}
-	
+
 	private static long numberOfResilients(long denominator) {
 		long counter = 1;
 		BigInteger denom = new BigInteger("" + denominator);
@@ -40,5 +41,5 @@ public class Problem243NotYetSolved {
 				counter++;
 		return counter * splitter;
 	}
-	
+
 }
