@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-/bin
-=======
 .idea
-bin
->>>>>>> 80cd3e02bfaac8a2d00793b4e4797c561d9f9b16
+/bin
+*.iml
