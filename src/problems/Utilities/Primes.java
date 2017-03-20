@@ -12,6 +12,11 @@ public class Primes {
 		return new BigInteger("" + number).isProbablePrime(certainty);
 	}
 	
+	public static boolean isPrime(long number) {
+		int certainty = 10;
+		return new BigInteger("" + number).isProbablePrime(certainty);
+	}
+	
 	private static boolean[] calculatePrimes(int limit) {
 		boolean[] numbers = new boolean[limit + 1];
 		numbers[0] = true;
